@@ -1,0 +1,8 @@
+package com.lhq.postmanagementservice;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient(name="home-service", url="")
+public interface HomeServiceProxy {
+
+}

@@ -1,0 +1,5 @@
+package com.lhq.fileservice.controller;
+
+public class FileController {
+
+}

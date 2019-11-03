@@ -1,0 +1,5 @@
+package com.lhq.zuulgateway;
+
+public interface HomeServiceProxy {
+
+}

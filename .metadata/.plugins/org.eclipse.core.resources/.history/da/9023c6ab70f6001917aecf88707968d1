@@ -1,0 +1,5 @@
+package com.lhq.houseservice.repository;
+
+public interface HouseRepository {
+
+}

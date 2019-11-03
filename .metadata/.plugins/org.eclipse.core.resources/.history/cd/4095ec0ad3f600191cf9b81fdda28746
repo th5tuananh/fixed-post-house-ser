@@ -1,0 +1,5 @@
+package com.lhq.fileservice.exception;
+
+public class FileStorageException {
+
+}

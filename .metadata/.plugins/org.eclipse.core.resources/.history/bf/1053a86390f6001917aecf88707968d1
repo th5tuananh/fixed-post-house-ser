@@ -1,0 +1,5 @@
+package com.lhq.postmanagementservice;
+
+public class UserFeignClientInterceptor {
+
+}

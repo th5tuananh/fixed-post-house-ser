@@ -1,0 +1,8 @@
+package com.lhq.thymclient.controller;
+
+
+
+@Controller
+public class MainController {
+
+}

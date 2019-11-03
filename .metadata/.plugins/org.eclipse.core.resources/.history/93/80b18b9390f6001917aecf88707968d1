@@ -1,0 +1,12 @@
+spring.application.name=post-managerment-service
+server.port=8002
+
+eureka.client.service-url.default-zone=http://localhost:8761/eureka
+
+
+security.oauth2.client.client-id={0oa1n780ckvv7xl2L357}
+security.oauth2.client.client-secret={0oa1n780ckvv7xl2L357}
+security.oauth2.client.access-token-uri=https://{dev-377192-admin.okta.com}/oauth2/default/v1/token
+security.oauth2.client.user-authorization-uri=https://{dev-377192-admin.okta.com}/oauth2/default/v1/authorize
+security.oauth2.client.scope=openid profile email
+security.oauth2.resource.user-info-uri=https://{dev-377192-admin.okta.com}/oauth2/default/v1/userinfo

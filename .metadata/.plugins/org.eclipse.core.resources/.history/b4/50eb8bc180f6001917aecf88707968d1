@@ -1,0 +1,11 @@
+package com.lhq.postmanagementservice.config;
+
+import feign.Logger;
+
+@Configuration
+public class HouseClientConfig {
+	@Bean
+	Logger.Level feignLoggerLevel(){
+		return Logger.Level.HEADERS;
+	}
+}

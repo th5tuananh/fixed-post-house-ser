@@ -1,0 +1,6 @@
+package com.lhq.fileservice.repository;
+
+@Repository
+public interface DBFileRepository extends JpaRepository<DBFile, String> {
+
+}

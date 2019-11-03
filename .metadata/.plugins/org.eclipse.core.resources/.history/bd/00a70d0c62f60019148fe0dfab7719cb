@@ -1,0 +1,17 @@
+package com.lhq.postmanagementservice;
+
+import java.util.List;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.lhq.homeservice.model.HomeCata;
+
+@FeignClient(name="home-service", url="localhost:8001")
+public interface HomeServiceProxy {
+	
+	@GetMapping("/house")
+	public List<PostCata> getAllHouse(){
+		return cataRepository.findAll();
+	}
+}

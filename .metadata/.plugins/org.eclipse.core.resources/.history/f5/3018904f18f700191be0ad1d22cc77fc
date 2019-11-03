@@ -1,0 +1,28 @@
+server.port=8762
+
+spring.application.name=zuul-gateway
+
+spring.main.allow-bean-definition-overriding=true
+
+eureka.client.service-url.default-zone=http://localhost:8761/eureka
+
+zuul.ignored-services=*
+
+# routing for post managerment service
+# zuul.routes.post-managerment-service.path=/api/**
+# zuul.routes.post-managerment-service.serviceId=post-managerment-service
+zuul.routes.house-service.path=/api/**
+zuul.routes.house-service.url=http://localhost:8003
+
+zuul.sensitive-headers=Cookie,Set-Cookie
+
+
+security.oauth2.client.client-id=0oa1n780ckvv7xl2L357
+security.oauth2.client.client-secret=qi22iW9GD3tREaUh93uMn22AKCOHGnrsg3CC7yft
+security.oauth2.client.access-token-uri=https://dev-377192.okta.com/oauth2/default/v1/token
+security.oauth2.client.user-authorization-uri=https://dev-377192.okta.com/oauth2/default/v1/authorize
+security.oauth2.client.scope=openid profile email
+security.oauth2.resource.user-info-uri=https://dev-377192.okta.com/oauth2/default/v1/userinfo
+
+security.oauth2.resource.prefer-token-info=true
+

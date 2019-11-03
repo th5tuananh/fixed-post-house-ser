@@ -1,0 +1,20 @@
+server.port=8762
+
+spring.application.name=zuul-gateway
+
+spring.main.allow-bean-definition-overriding=true
+
+eureka.client.service-url.default-zone=http://localhost:8761/eureka
+
+zuul.ignored-services=*
+
+# routing for post managerment service
+# zuul.routes.post-managerment-service.path=/api/**
+# zuul.routes.post-managerment-service.serviceId=post-managerment-service
+zuul.routes.house-service.path=/**
+zuul.routes.house-service.url=http://localhost:8003
+
+zuul.sensitive-headers=Cookie,Set-Cookie
+
+
+

@@ -1,0 +1,5 @@
+package com.lhq.fileservice.service;
+
+public class DBFileStorageService {
+
+}

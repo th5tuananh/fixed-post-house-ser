@@ -1,0 +1,11 @@
+package com.lhq.postmanagementservice.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import com.lhq.postmanagementservice.model.PostCata;;
+
+public class PostManagementController {
+	@GetMapping("/post")
+	public List<PostCata> getallHome(){
+		
+	}
+}

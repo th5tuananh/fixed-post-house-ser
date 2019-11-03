@@ -1,0 +1,7 @@
+package com.lhq.houseservice.configuration;
+
+public class HouseConfig {
+	public House house() {
+		return new House();
+	}
+}

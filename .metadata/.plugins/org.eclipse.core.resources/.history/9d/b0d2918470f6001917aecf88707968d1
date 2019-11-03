@@ -1,0 +1,9 @@
+package com.lhq.houseservice.configuration;
+
+import com.lhq.homeservice.model.Home;
+
+public class HouseConfig {
+	public House house() {
+		return new House();
+	}
+}

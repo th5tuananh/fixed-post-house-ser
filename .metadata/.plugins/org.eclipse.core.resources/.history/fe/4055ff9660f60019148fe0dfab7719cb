@@ -1,0 +1,6 @@
+package com.lhq.postmanagementservice;
+
+@FeignClient(name="", url="")
+public interface HomeServiceProxy {
+
+}

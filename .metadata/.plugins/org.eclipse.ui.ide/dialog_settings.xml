@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="D:\eclipse-workspace\thym-client"/>
+		<item value="D:\eclipse-workspace\thyml-client"/>
+		<item value="D:\eclipse-workspace\client-thyml"/>
+		<item value="D:\eclipse-workspace\gateway"/>
+		<item value="D:\eclipse-workspace\file-service"/>
+		<item value="D:\eclipse-workspace\zuul-gateway"/>
+		<item value="D:\eclipse-workspace\house-service"/>
+		<item value="D:\eclipse-workspace\demo"/>
+		<item value="D:\eclipse-workspace\home-service"/>
+		<item value="D:\eclipse-workspace\eureka-service"/>
+	</list>
+</section>

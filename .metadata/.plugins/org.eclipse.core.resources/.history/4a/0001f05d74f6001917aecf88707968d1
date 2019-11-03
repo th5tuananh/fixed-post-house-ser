@@ -1,0 +1,5 @@
+package com.lhq.postmanagementservice.model;
+
+public class Post {
+
+}

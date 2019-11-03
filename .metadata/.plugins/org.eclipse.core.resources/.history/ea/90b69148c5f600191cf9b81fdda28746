@@ -1,0 +1,5 @@
+package com.lhq.zuulgateway.config;
+
+public class HouseClientConfig {
+
+}

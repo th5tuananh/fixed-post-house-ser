@@ -1,0 +1,5 @@
+package com.lhq.thymclient;
+
+public class SecurityConfiguration {
+
+}

@@ -1,0 +1,13 @@
+package com.lhq.postmanagementservice.config;
+
+import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
+
+public class ResourceServerConfig extends ResourceServerConfigurerAdapter{
+	@Override
+    public void configure(HttpSecurity http) throws Exception {
+        http
+            .requestMatcher(new RequestHeaderRequestMatcher("Authorization"))
+            .authorizeRequests()
+            .antMatchers("/**").authenticated();
+    }
+}

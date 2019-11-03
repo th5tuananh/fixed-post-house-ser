@@ -1,0 +1,5 @@
+package com.lhq.fileservice.repository;
+
+public interface DBFileRepository {
+
+}

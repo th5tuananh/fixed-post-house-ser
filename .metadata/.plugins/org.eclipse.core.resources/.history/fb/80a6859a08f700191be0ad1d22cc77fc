@@ -1,0 +1,71 @@
+package com.lhq.fileservice.model;
+
+import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Lob;
+import javax.persistence.Table;
+
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+@Entity
+@Table(name = "files")
+@EntityListeners(AuditingEntityListener.class)
+public class DBFile {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private String id;
+
+    private String fileName;
+
+    private String fileType;
+
+    @Lob
+    private byte[] data;
+    
+    public DBFile() {
+
+    }
+
+    public DBFile(String fileName, String fileType, byte[] data) {
+        this.fileName = fileName;
+        this.fileType = fileType;
+        this.data = data;
+    }
+
+	public String getId() {
+		return id;
+	}
+
+	public String getFileName() {
+		return fileName;
+	}
+
+	public String getFileType() {
+		return fileType;
+	}
+
+	public byte[] getData() {
+		return data;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+
+	public void setFileType(String fileType) {
+		this.fileType = fileType;
+	}
+
+	public void setData(byte[] data) {
+		this.data = data;
+	}
+    
+    
+}

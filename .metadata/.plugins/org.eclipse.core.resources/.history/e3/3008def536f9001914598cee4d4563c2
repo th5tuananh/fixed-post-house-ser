@@ -1,0 +1,28 @@
+package com.lhq.thymclient.controller;
+
+import java.security.Principal;
+
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.oauth2.core.oidc.user.OidcUser;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class MainController {
+	@RequestMapping("/securedPage")
+    public String securedPage(Model model, Principal principal) {
+		
+        return "securedPage";
+    }
+    
+    @RequestMapping("/")
+    public String index(Model model, Principal principal) {
+        return "index";
+    }
+    @GetMapping("/hello")
+    String helloUser(@AuthenticationPrincipal OidcUser user) {
+    	return "Hello" + user.getAttributes().get("email");
+    }
+}

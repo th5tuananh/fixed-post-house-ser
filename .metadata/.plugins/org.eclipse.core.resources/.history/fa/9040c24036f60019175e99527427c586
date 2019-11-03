@@ -1,0 +1,48 @@
+package com.lhq.homeservice.controller;
+
+import java.util.List;
+
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.lhq.homeservice.exception.ResourceNotFoundException;
+import com.lhq.homeservice.model.Home;
+import com.lhq.homeservice.model.HomeCata;
+import com.lhq.homeservice.repository.HomeCataRepository;
+import com.lhq.homeservice.repository.HomeRepository;
+import com.lhq.homeservice.service.HomeService;
+
+@RestController
+@RequestMapping("/api")
+public class HomeController {
+	
+	@Autowired
+	HomeRepository homeRepository;
+	
+	@Autowired
+	HomeCataRepository cataRepository;
+	
+	@GetMapping("/house")
+	public List<Home> getAllHouse(){
+		return homeRepository.findAll();
+	}
+	@GetMapping("/house/{id}")
+	public Home getHouse(@PathVariable("id") long homeId){
+
+		return homeRepository.findById(homeId).orElseThrow(() -> new ResourceNotFoundException("Home", "id", homeId));
+	}
+	
+	@PostMapping("/house")
+	public Home postHouse(@Valid @RequestBody Home home) {
+		return homeRepository.save(home);
+	}
+}

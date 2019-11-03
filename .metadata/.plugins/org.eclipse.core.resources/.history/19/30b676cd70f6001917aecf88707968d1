@@ -1,0 +1,5 @@
+package com.lhq.houseservice.controller;
+
+public class HouseController {
+
+}

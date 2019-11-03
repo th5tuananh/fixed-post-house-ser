@@ -1,0 +1,17 @@
+package com.lhq.postmanagementservice;
+
+import java.util.List;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.lhq.postmanagementservice.model.Post;
+import com.lhq.postmanagementservice.model.PostCata;
+
+@FeignClient(name="house-service", url="localhost:8003")
+public interface HomeServiceProxy {
+	
+	@GetMapping("/house/{id}")
+	public Post getHouse(@PathVariable("id") int id);
+}

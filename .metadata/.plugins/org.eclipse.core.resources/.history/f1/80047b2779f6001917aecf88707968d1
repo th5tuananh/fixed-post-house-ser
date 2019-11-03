@@ -1,0 +1,48 @@
+package com.lhq.postmanagementservice.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.lhq.postmanagementservice.HomeServiceProxy;
+import com.lhq.postmanagementservice.model.Post;
+import com.lhq.postmanagementservice.model.PostCata;
+
+@RestController
+public class PostManagementController {
+	
+	@Autowired
+	private HomeServiceProxy homeServiceProxy;
+	
+	@GetMapping("/hello")
+	public String hello() {
+		String hello = "hello";
+		return hello;
+	}
+	@GetMapping("/post/{id}")
+	public Post getPost(@PathVariable long id) {
+		Post reponse = homeServiceProxy.getHouse(id);
+		return new Post(reponse.getHouse_id(),
+				reponse.getUser_id(),
+				reponse.getCatalog(),
+				reponse.getTitle(),
+				reponse.getContent(),
+				reponse.getPrice(),
+				reponse.getArea(),
+				reponse.getImage_url(),
+				reponse.getCity(),
+				reponse.getDistrict(),
+				reponse.getAddress(),
+				reponse.getBedroom(),
+				reponse.getRestroom(),
+				reponse.getFloor(),
+				reponse.getCertification(),
+				reponse.getDirection());
+	}
+	
+}
+
